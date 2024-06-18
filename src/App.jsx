@@ -1,0 +1,87 @@
+import { Route, Routes } from "react-router-dom"
+import DashboardLayout from "./layouts/dashboardLayout"
+import DashboardPage from "./pages/dashboardPage"
+import ProductsPage from "./pages/productsPage"
+import BuyPage from "./pages/buyPage"
+import SellPage from "./pages/sellPage"
+import WorkerPage from "./pages/workerPage"
+import CaregoryPage from "./pages/categoryPage"
+import SupplierPage from "./pages/supplierPage"
+import CustomerPage from "./pages/customersPage"
+import MyAccountPage from "./pages/profilepages/myAccountPage"
+import SettingsPage from "./pages/profilepages/settingsPage"
+import ProductProcess from "./pages/productsPage/productProcess"
+import SendMessagePage from "./pages/sendMessagePage"
+import AttendacePage from "./pages/workerPage/attendancePage"
+import TransactionPage from "./pages/customersPage/transactionPage"
+import Invoice from "./components/dashboard/invoice"
+
+
+function App() {
+
+
+  return (
+    <Routes>
+      <Route path="/" element={<DashboardLayout />} >
+
+        {/* dashboard page */}
+        <Route index element={<DashboardPage />} />
+
+        {/* product page */}
+        <Route path="/products-process" element={<ProductsPage />} />
+        <Route path="/products-process/:id" element={<ProductProcess />} />
+
+        {/* buy page */}
+        <Route path="/products/buy" element={<BuyPage />} />
+
+        {/* sell page */}
+        <Route path="/products/sell" element={<SellPage />} />
+
+        {/* invoice */}
+        <Route path="/products/invoice" element={<Invoice />} />
+        
+        {/* worker page */}
+        <Route path="/account/workers" element={<WorkerPage />} />
+
+        {/* atttandace */}
+        <Route path="/account/workers/attandance" element={<AttendacePage />} />
+
+        {/* category page */}
+        <Route path="/others/category" element={<CaregoryPage />} />
+        
+        {/* supplier page */}
+        <Route path="/account/suppliers" element={<SupplierPage />} />
+
+        {/* customer page */}
+        <Route path="/account/customers" element={<CustomerPage />} />
+        <Route path="/account/customer/transaction" element={<TransactionPage />} />
+
+
+
+        {/* My Account page */}
+        <Route path="/profile" element={<MyAccountPage />} />
+
+        {/* Settings page */}
+        <Route path="/profile/settings" element={<SettingsPage />} />
+
+
+
+        <Route path="/others/message" element={<SendMessagePage />} />
+
+        
+        
+
+                
+
+
+
+
+
+
+
+      </Route>
+    </Routes>
+  )
+}
+
+export default App
