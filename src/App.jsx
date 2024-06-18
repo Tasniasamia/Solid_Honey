@@ -16,6 +16,7 @@ import AttendacePage from "./pages/workerPage/attendancePage"
 import TransactionPage from "./pages/customersPage/transactionPage"
 import Invoice from "./components/landing/invoice"
 import Preview from "./components/landing/preview"
+import SupplierListPage from "./pages/supplierListPage"
 
 
 function App() {
@@ -54,7 +55,10 @@ function App() {
         <Route path="/others/category" element={<CaregoryPage />} />
         
         {/* supplier page */}
-        <Route path="/account/suppliers" element={<SupplierPage />} />
+        {/* <Route path="/account/suppliers" element={<SupplierPage />} /> */}
+        <Route path="/account/suppliers" element={<SupplierListPage />} />
+        <Route path="/account/suppliers/:productId" element={<SupplierPage />} />
+
 
         {/* customer page */}
         <Route path="/account/customers" element={<CustomerPage />} />

@@ -29,7 +29,7 @@ const data = [
 
 
 
-const SupplierPage = () => {
+const SupplierPage = ({params}) => {
   return (
     <div>
       <div className='bg-muted rounded-md'>
