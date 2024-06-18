@@ -5,6 +5,7 @@ import { getCategoriesList } from '../../redux/actions/categoriesSlice'
 import {POST_SELL_PRODUCTS} from "../../../axios"
 import { Toaster, toast } from 'react-hot-toast'
 import { instance } from '../../../axios'
+import { Link } from 'react-router-dom'
 
 
 const SellPage = () => {
