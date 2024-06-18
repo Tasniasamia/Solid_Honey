@@ -10,8 +10,8 @@ const Invoice = () => {
           className="w-full h-auto object-fill"
         />
       </div>
-      <div className="mt-[50px] container ">
-        <div className="w-full mx-auto md:max-w-5xl pb-6 ">
+      <div className="mt-[50px] container mx-auto md:max-w-5xl">
+        <div className="w-full  pb-6 ">
           <h1 className="text-[24px] font-bold text-center">চালান</h1>
           <div className=" mt-5 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-x-3  sm:gap-y-0 gap-y-6 lg:justify-items-center sm:justify-items-start justify-items-center ">
             <div className="col-span-1">
@@ -32,7 +32,7 @@ const Invoice = () => {
             </div>
           </div>
         </div>
-        <div className="overflow-x-auto md:max-w-5xl mx-auto">
+        <div className="overflow-x-auto ">
           <table className="w-full  table-auto border-collapse border border-slate-400  ">
             <thead className="bg-gray-50 text-xs font-semibold uppercase text-gray-500 h-10 ">
               <th className="border border-slate-300 font-bold">ক্রম</th>
