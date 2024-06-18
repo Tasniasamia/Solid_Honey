@@ -12,8 +12,7 @@ const Preview = () => {
   // HiddenItems functionality
   const [hiddenItems, setHiddenItems] = useState({
     header: false,
-    footer: false,
-    both: false,
+    footer: false
   });
 
   const handleCheckboxChange = (e) => {
@@ -24,8 +23,8 @@ const Preview = () => {
     }));
   };
 
-  const isHeaderHidden = hiddenItems.header || hiddenItems.both;
-  const isFooterHidden = hiddenItems.footer || hiddenItems.both;
+  const isHeaderHidden = hiddenItems.header === true;
+  const isFooterHidden = hiddenItems.footer === true; 
 
   return (
     <div className="container mx-auto my-[20px]">
@@ -164,9 +163,7 @@ const Preview = () => {
           <label htmlFor="header"> Header</label><br/>
           <input type="checkbox" onChange={handleCheckboxChange} id="footer" name="footer" />
           <label htmlFor="footer"> Footer</label><br/>
-          <input type="checkbox" onChange={handleCheckboxChange} id="both" name="both" />
-          <label htmlFor="both"> Both</label>
-        </div>
+         </div>
         <button
           className="text-white bg-blue-600 hover:bg-blue-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm mr-2 mb-2 dark:bg-blue-500 dark:hover:bg-blue-500 focus:outline-none dark:focus:ring-blue-500 h-[40px] w-[100px]"
           onClick={handlePrint}
