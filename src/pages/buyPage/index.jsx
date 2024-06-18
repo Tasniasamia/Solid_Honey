@@ -22,7 +22,9 @@ const BuyPage = () => {
         setSubCategoryList([...subCategory?.subcategories])
     }
 
-
+   const handlePrint=()=>{
+    console.log("print");
+   }
 
 
 
@@ -263,7 +265,7 @@ const BuyPage = () => {
                         </div>
 
                         <hr className="my-2"/>
-                        <button className="w-full text-center font-semibold bg-blue-100 text-purple-600 py-1 px-2 rounded-lg cursor-pointer">প্রিন্ট</button>
+                        <button className="w-full text-center font-semibold bg-blue-100 text-purple-600 py-1 px-2 rounded-lg cursor-pointer"onClick={handlePrint}>প্রিন্ট</button>
                         <button type='submit' className="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">Send SMS</button>
                     </div>
                 </div>
