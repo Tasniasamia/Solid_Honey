@@ -35,11 +35,7 @@ export const sidebar = [
         nav_Link: "/products/sell",
         icon: DollarSign,
       },
-      {
-        nav_name: "চালান",
-        nav_Link: "/products/invoice",
-        icon: LiaFileInvoiceSolid,
-      },
+     
       
     ]
   },

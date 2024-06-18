@@ -1,8 +1,9 @@
 import React from "react";
 
 const Invoice = () => {
-  return (
-    <div className="bg-white w-full">
+return (
+<div className="container mx-auto my-[20px]">
+<div className="bg-white w-full">
       <div className="w-full h-auto">
         <img
           src="/header.png"
@@ -96,6 +97,8 @@ const Invoice = () => {
         />
       </div>
     </div>
+    </div>
+    
   );
 };
 

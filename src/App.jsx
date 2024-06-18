@@ -14,7 +14,8 @@ import ProductProcess from "./pages/productsPage/productProcess"
 import SendMessagePage from "./pages/sendMessagePage"
 import AttendacePage from "./pages/workerPage/attendancePage"
 import TransactionPage from "./pages/customersPage/transactionPage"
-import Invoice from "./components/dashboard/invoice"
+import Invoice from "./components/landing/invoice"
+import Preview from "./components/landing/preview"
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
 
   return (
     <Routes>
+       {/* invoice */}
+      <Route path="/invoice" element={<Invoice />} />
+      <Route path="/preview" element={<Preview />} />
+
       <Route path="/" element={<DashboardLayout />} >
 
         {/* dashboard page */}
@@ -37,9 +42,8 @@ function App() {
         {/* sell page */}
         <Route path="/products/sell" element={<SellPage />} />
 
-        {/* invoice */}
-        <Route path="/products/invoice" element={<Invoice />} />
-        
+       
+
         {/* worker page */}
         <Route path="/account/workers" element={<WorkerPage />} />
 

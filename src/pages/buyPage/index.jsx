@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { useDispatch, useSelector } from 'react-redux'
 import { getCategoriesList } from '../../redux/actions/categoriesSlice'
+import { Link } from 'react-router-dom'
 
 
 const BuyPage = () => {
@@ -257,13 +258,12 @@ const BuyPage = () => {
                         </div>
                         <hr/>
                         <div className="flex justify-between mb-2 mt-2">
-                            <span className="font-semibold bg-gray-300 p-2 rounded-xl ml-8"><a href="#">প্রিভিউ</a></span>
-                            <span className="font-semibold bg-gray-300 p-2 rounded-xl mr-8"><a href="#">চালান</a></span>
+                            <span className="font-semibold bg-gray-300 p-2 rounded-xl ml-8"><Link href="/preview">প্রিভিউ</Link></span>
+                            <span className="font-semibold bg-gray-300 p-2 rounded-xl mr-8"><Link to="/invoice">চালান</Link></span>
                         </div>
 
                         <hr className="my-2"/>
                         <button className="w-full text-center font-semibold bg-blue-100 text-purple-600 py-1 px-2 rounded-lg cursor-pointer">প্রিন্ট</button>
-                        
                         <button type='submit' className="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">Send SMS</button>
                     </div>
                 </div>

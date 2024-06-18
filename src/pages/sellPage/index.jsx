@@ -360,8 +360,8 @@ const SellPage = () => {
                         </div>
                         <hr/>
                         <div className="flex justify-between mb-2 mt-2">
-                            <span className="font-semibold bg-gray-300 p-2 rounded-xl ml-8"><a href="#">প্রিভিউ</a></span>
-                            <span className="font-semibold bg-gray-300 p-2 rounded-xl mr-8"><a href="#">চালান</a></span>
+                            <span className="font-semibold bg-gray-300 p-2 rounded-xl ml-8"><Link to="/preview">প্রিভিউ</Link></span>
+                            <span className="font-semibold bg-gray-300 p-2 rounded-xl mr-8"><Link to="/invoice">চালান</Link></span>
                         </div>
 
                         <hr className="my-2"/>
