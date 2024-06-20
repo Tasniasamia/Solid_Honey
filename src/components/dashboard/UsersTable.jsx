@@ -9,19 +9,16 @@ import {
     TableFooter,
     TableRow,
 } from "@/components/ui/table"
+import { Link } from 'react-router-dom';
 
 
-const UsersTable = ({table_type, data, header_title, Component}) => {
+const UsersTable = ({table_type, data, header_title, Component,action}) => {
     const [currentPage, setCurrentPage] = useState(1);
-
     const [itemsPerPage] = useState(10)
-
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentUsers = data?.slice(indexOfFirstItem, indexOfLastItem);
-  
     const totalPages = Math.ceil(data?.length / itemsPerPage);
-
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
@@ -36,6 +33,8 @@ const UsersTable = ({table_type, data, header_title, Component}) => {
                 <TableHead className="text-honey">নাম</TableHead>
                 <TableHead className="text-honey">Phone Number</TableHead>
                 <TableHead className="text-honey text-right">Address</TableHead>
+                {action && <TableHead className=" font-bold px-4 py-2">বিবরণ </TableHead>}
+
                 </TableRow>
             </TableHeader>
             <TableBody>
@@ -44,6 +43,16 @@ const UsersTable = ({table_type, data, header_title, Component}) => {
                         <TableCell className="font-medium">{d?.name}</TableCell>
                         <TableCell>{d?.phone_number}</TableCell>
                         <TableCell className="text-right">{d?.address}</TableCell>
+                        {action && (
+                      <TableCell className=" px-4 py-2 text-blue-500 underline whitespace-nowrap ">
+                        <Link
+                          to={`/account/customers/${i}`}
+                          className="cursor-pointer"
+                        >
+                          বিস্তারিত
+                        </Link>
+                      </TableCell>
+                    )}
 
                     </TableRow>
                 ))}

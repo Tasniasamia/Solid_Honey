@@ -46,7 +46,7 @@ const CustomerPage = () => {
 			<SearchBox searchHandler={searchHandler} />
 		  </div>
 		  <div>
-			<UsersTable header_title={"Customer"} data={data} Component={AddModal} />
+			<UsersTable header_title={"Customer"} data={data} Component={AddModal} action />
 		  </div>
 		</div>
 	)

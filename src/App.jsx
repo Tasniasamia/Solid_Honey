@@ -17,6 +17,7 @@ import TransactionPage from "./pages/customersPage/transactionPage"
 import Invoice from "./components/landing/invoice"
 import Preview from "./components/landing/preview"
 import SupplierListPage from "./pages/supplierListPage"
+import CustomerDetails from "./pages/CustomerDetails"
 
 
 function App() {
@@ -62,6 +63,8 @@ function App() {
 
         {/* customer page */}
         <Route path="/account/customers" element={<CustomerPage />} />
+        <Route path="/account/customers/:customerId" element={<CustomerDetails />} />
+
         <Route path="/account/customer/transaction" element={<TransactionPage />} />
 
 
